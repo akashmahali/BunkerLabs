@@ -18,6 +18,9 @@ class DrawView: UIView {
     var hasTouchesEnded = false
     var contextImage:UIImage?
     var fillColor : UIColor =  UIColor.blackColor()
+    
+    @IBOutlet weak var mirroringSwitch: UISwitch!
+    
 
     
     // Only override drawRect: if you perform custom drawing.
@@ -26,7 +29,18 @@ class DrawView: UIView {
         // Drawing code
         
         if points.count > 0 {
-            drawMirrorShape(rect)
+            
+            
+            if mirroringSwitch.on {
+            
+                drawMirrorShape(rect)
+                
+            }else{
+            
+                drawShape(rect)
+            }
+            
+            
 
         }
         

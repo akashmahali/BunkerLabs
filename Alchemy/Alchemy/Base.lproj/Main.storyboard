@@ -45,16 +45,26 @@
                                     <action selector="changeColor:" destination="8bC-Xf-vdC" eventType="touchUpInside" id="gFR-l8-7Ay"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FJc-iz-OFj">
+                                <rect key="frame" x="276" y="561" width="51" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="2SN-6L-nAw"/>
+                                    <constraint firstAttribute="width" constant="49" id="gft-nd-QKO"/>
+                                </constraints>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="FJc-iz-OFj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L3e-Tc-dFE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FJc-iz-OFj" secondAttribute="bottom" constant="8" id="dYP-cl-dGt"/>
                             <constraint firstAttribute="leadingMargin" secondItem="0tD-yd-lRW" secondAttribute="leading" id="hoo-w7-3hc"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0tD-yd-lRW" secondAttribute="bottom" constant="8" id="qqL-tS-Gqp"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fha-x5-ZQq" secondAttribute="bottom" constant="20" id="vPK-TW-l74"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fha-x5-ZQq" secondAttribute="trailing" id="wmY-aP-zpj"/>
                         </constraints>
                         <connections>
+                            <outlet property="mirroringSwitch" destination="FJc-iz-OFj" id="n7r-dJ-she"/>
                             <outletCollection property="gestureRecognizers" destination="SFf-zk-cat" appends="YES" id="AFy-Hp-pLP"/>
                         </connections>
                     </view>
