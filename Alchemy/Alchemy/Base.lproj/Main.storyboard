@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Alchemy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="DrawView" customModule="Alchemy" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0tD-yd-lRW">
+                                <rect key="frame" x="20" y="552" width="100" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="1Nd-tN-Apz"/>
+                                    <constraint firstAttribute="width" constant="100" id="qI7-7o-XcG"/>
+                                </constraints>
+                                <state key="normal" title="Black">
+                                    <color key="titleColor" red="1" green="1" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeColor:" destination="8bC-Xf-vdC" eventType="touchUpInside" id="KO8-pd-5zw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fha-x5-ZQq">
+                                <rect key="frame" x="480" y="540" width="100" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="KIp-vJ-zod"/>
+                                    <constraint firstAttribute="height" constant="40" id="s7T-V0-DRy"/>
+                                </constraints>
+                                <state key="normal" title="White">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeColor:" destination="8bC-Xf-vdC" eventType="touchUpInside" id="gFR-l8-7Ay"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="0tD-yd-lRW" secondAttribute="leading" id="hoo-w7-3hc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0tD-yd-lRW" secondAttribute="bottom" constant="8" id="qqL-tS-Gqp"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fha-x5-ZQq" secondAttribute="bottom" constant="20" id="vPK-TW-l74"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fha-x5-ZQq" secondAttribute="trailing" id="wmY-aP-zpj"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="SFf-zk-cat" appends="YES" id="AFy-Hp-pLP"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="iClearContextTapGesture" destination="SFf-zk-cat" id="TWf-YR-zzC"/>
+                        <outlet property="iDrawView" destination="8bC-Xf-vdC" id="qqu-XF-xwr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="SFf-zk-cat">
+                    <connections>
+                        <action selector="clearDrawingContext:" destination="BYZ-38-t0r" id="ZEe-oN-smb"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+</document>
